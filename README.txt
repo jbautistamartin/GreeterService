@@ -8,7 +8,7 @@ docker create --name greeterservice -p 5104:5104 -p 5105:5105 -e ASPNETCORE_Kest
 
 --> Para contenedores Linux.
 
-docker create --name greeterservice -p 5001:5001 -p 5105:5105 -e ASPNETCORE_Kestrel__Certificates__Default__Password=GreeterService -e ASPNETCORE_Kestrel__Certificates__Default__Path=/App/GreeterService.pfx greeterservice
+docker create --name greeterservice -p 5104:5104 -p 5105:5105 -e ASPNETCORE_Kestrel__Certificates__Default__Password=GreeterService -e ASPNETCORE_Kestrel__Certificates__Default__Path=/App/GreeterService.pfx greeterservice
 
 
 sc create GreeterService binPath=<ruta>\GreeterService.exe

@@ -1,3 +1,4 @@
+using GreeterService.Business;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -14,13 +15,12 @@ namespace GreeterService.Controllers
             _logger = logger;
         }
 
+        private GreeterImplementation innerGreeter = new GreeterImplementation();
+
         [HttpGet("SayHello")]
         public HelloReply SayHello(HelloRequest request)
         {
-            return new HelloReply
-            {
-                Message = "Hello " + request.Name
-            };
+            return innerGreeter.SayHello(request);
         }
     }
 }
