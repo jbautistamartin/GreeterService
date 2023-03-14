@@ -11,7 +11,7 @@ var client = new GreeterClient("https://localhost:5105", httpClient);
 
 // LLamo al servicio
 var reply = await client.SayHelloAsync(new HelloRequest { Name = "GreeterClient" });
-Console.WriteLine("GRPC Greeting: " + reply.Message);
+Console.WriteLine("WebApi Greeting: " + reply.Message);
 
 Console.WriteLine("Press any key to exit...");
 Console.ReadKey();
